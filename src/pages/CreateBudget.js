@@ -14,7 +14,9 @@ export default function CreateBudget() {
             maxLength: 100,
             valid: false,
             errorMessages: ['*','El Cliente debe tener al menos 4 caracteres'],
-            pattern: /^.{4,}$/
+            pattern: /^.{4,}$/,
+            messageTestId: 'test-customer-message',
+            inputTestId: 'test-customer-input'
         },
         cif: {
             value: '',
@@ -22,7 +24,9 @@ export default function CreateBudget() {
             maxLength: 9,
             valid: false,
             errorMessages: ['*','El CIF debe comenzar por letra válida y tener 9 caracteres'],
-            pattern: /([ABCDEFGHPQS])([0-9]{8})/i
+            pattern: /([ABCDEFGHPQS])([0-9]{8})/i,
+            messageTestId: 'test-cif-message',
+            inputTestId: 'test-cif-input'
         },
         contact: {
             value: '',
@@ -30,7 +34,9 @@ export default function CreateBudget() {
             maxLength: 100,
             valid: true,
             errorMessages: ['',''],
-            pattern: /.*/i // All credits to Raul :)
+            pattern: /.*/i, // All credits to Raul :)
+            messageTestId: 'test-contact-message',
+            inputTestId: 'test-contact-input'
         },
         date: {
             value: new Date().toISOString().substring(0,10),

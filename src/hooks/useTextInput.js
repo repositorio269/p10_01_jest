@@ -33,9 +33,9 @@ export default function useTextInput(inputData) {
         <>
             <label>
                 {data.label}
-                <span className="alert">{validation.errorMessage}</span>
+                <span className="alert" data-testid={data.messageTestId}>{validation.errorMessage}</span>
             </label>
-            <input type="text" 
+            <input data-testid={data.inputTestId} type="text" 
                    value={data.value}
                    maxLength={data.maxLength}
                    onChange={handleOnChange}/>
