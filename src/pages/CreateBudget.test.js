@@ -3,7 +3,8 @@ import userEvent from "@testing-library/user-event";
 import CreateBudget from "./CreateBudget";
 
 describe('Formulario crear cliente',  () => { // Describe el suite test
-
+    // Usar async await para gestionar la asincronía de la carga de cada hook
+    // All credits to Raul
     test('Valida el campo CIF', async () => { // Decribe el case test
         render(<CreateBudget />); // si recibiera props se las pasaremos de datos mock
         // En el caso de necesitar ver el componente renderizado una fórmula
